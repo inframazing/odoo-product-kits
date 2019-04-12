@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kit_do_stock_form_view" model="ir.ui.view">
+        <field name="name">kit_do_stock_form_view</field>
+        <field name="model">kit.do.stock.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Ingresar a Almacén">
+                <group>
+                    <field name="kit_id" readonly="1" options="{'no_open': True}"/>
+                    <field name="location" string="Almacén destino:"
+                           domain="[('is_demo_location', '=', True)]"
+                           options="{'no_create': True, 'no_edit': True}"/>
+                </group>
+                <footer>
+                    <button string="Ingresar a Almacén"
+                            class="oe_highlight"
+                            icon="fa-chevron-circle-right"
+                            type="object"
+                            name="kit_do_stock_wizard"/>
+                    <button special="cancel" string="Cancelar" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

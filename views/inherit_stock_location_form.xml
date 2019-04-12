@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="inherit_vehicle_view_form" model="ir.ui.view">
+        <field name="name">inherit.stock.view.form</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <!-- Se agrega la pestaña de Rastreo para poder definir un identificador-->
+            <xpath expr="//field[@name='return_location']" position="after">
+                <field name="is_demo_location" string="¿Es una ubicación de demo?"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

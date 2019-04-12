@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kit_move_stock_form_view" model="ir.ui.view">
+        <field name="name">kit_move_stock_form_view</field>
+        <field name="model">kit.move.stock.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Mover de Almacén">
+                <group>
+                    <field name="location_id" string="Almacén origen:" readonly="1" options="{'no_open': True}"/>
+                    <field name="location_dest" string="Almacén destino:"/>
+                </group>
+                <footer>
+                    <button string="Mover de Almacén"
+                            class="oe_highlight"
+                            icon="fa-arrows-alt"
+                            type="object"
+                            name="kit_move_stock_wizard"/>
+                    <button special="cancel" string="Cancelar" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

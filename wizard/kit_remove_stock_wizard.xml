@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kit_remove_stock_form_view" model="ir.ui.view">
+        <field name="name">kit_remove_stock_form_view</field>
+        <field name="model">kit.remove.stock.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Dar de Baja">
+                <group>
+                    <field name="location_id" string="Almacén actual:" readonly="1" options="{'no_open': True}"/>
+                </group>
+                <footer>
+                    <button string="Dar de Baja"
+                            class="oe_highlight"
+                            icon="fa-angle-double-down"
+                            type="object"
+                            name="kit_remove_stock_wizard"/>
+                    <button special="cancel" string="Cancelar" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
